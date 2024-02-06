@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.originx.lrd1122ss.ServerController">
+   <children>
+      <Button fx:id="exeChooser" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#exeChooser_onAction" text="选择文件" />
+      <Button fx:id="switchServerStateButton" layoutX="469.0" layoutY="309.0" mnemonicParsing="false" onAction="#switchServerStateButton_Action" prefHeight="77.0" prefWidth="117.0" text="开启">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font></Button>
+      <Text fx:id="exePathText" layoutX="88.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="未选择路径" />
+      <Text fx:id="serverStateText" layoutX="507.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="未运行">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text fx:id="processIDText" layoutX="3.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="进程PID: -1" wrappingWidth="123.240234375" />
+      <Text fx:id="gameMemoryUsedText" layoutX="3.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="内存占用: 0MB/8192MB" />
+      <CheckBox fx:id="memoryLimitCheckBox" layoutX="16.0" layoutY="67.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="99.0" text="运行内存检测" />
+      <TextField fx:id="memoryLimitTextField" layoutX="115.0" layoutY="67.0" prefHeight="23.0" prefWidth="51.0" promptText="8192" />
+      <Text layoutX="170.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MB" />
+      <CheckBox fx:id="systemMemoryUsedCheckBox" layoutX="16.0" layoutY="104.0" mnemonicParsing="false" text="系统内存检测" />
+      <Text fx:id="systemMemoryLeftText" layoutX="3.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="系统剩余内存: 0MB" />
+      <TextField fx:id="systemMemoryUsedTextField" layoutX="115.0" layoutY="101.0" prefHeight="23.0" prefWidth="51.0" promptText="1024" />
+      <Text layoutX="170.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MB" />
+      <CheckBox fx:id="autoBackupCheckBox" layoutX="16.0" layoutY="137.0" mnemonicParsing="false" text="自动备份" />
+      <ChoiceBox fx:id="backupChoiceBox" layoutX="114.0" layoutY="134.0" prefHeight="23.0" prefWidth="82.0" />
+      <TextField fx:id="autoBackupIntervalTextField" layoutX="233.0" layoutY="134.0" prefHeight="23.0" prefWidth="51.0" promptText="60" />
+      <Text layoutX="214.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="每" />
+      <Text layoutX="294.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="分钟" />
+      <Button fx:id="openBackupFolderButton" layoutX="35.0" layoutY="171.0" mnemonicParsing="false" onAction="#openBackupFolderButton_onAction" text="查看备份" />
+   </children>
+</Pane>
