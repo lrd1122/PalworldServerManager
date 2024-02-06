@@ -1,0 +1,2 @@
+# PalworldServerManager
+PalworldServerManager
